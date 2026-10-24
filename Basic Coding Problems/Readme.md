@@ -36,45 +36,7 @@
 
 ---
 
-## 🗺️ Learning Roadmap
-
-A structured learning progression designed to build algorithmic thinking from foundational linear arrays to advanced hierarchical structures:
-
-```mermaid
-flowchart TD
-    subgraph Phase1["Phase 1: Linear Foundations"]
-        A["1. Arrays"] --> B["3. Two Pointers"]
-        B --> C["4. Sliding Window"]
-        C --> D["7. Strings"]
-    end
-
-    subgraph Phase2["Phase 2: Searching & Sorting"]
-        D --> E["5. Binary Search"]
-        E --> F["6. Sorting Algorithms"]
-        F --> G["2. Matrix & 2D Arrays"]
-    end
-
-    subgraph Phase3["Phase 3: Linear Abstract Data Types"]
-        G --> H["8. Stack & Queue"]
-        H --> I["9. Linked List"]
-    end
-
-    subgraph Phase4["Phase 4: Hierarchical Structures"]
-        I --> J["10. Binary Trees"]
-        J --> K["11. Binary Search Tree (BST)"]
-    end
-
-    style Phase1 fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff
-    style Phase2 fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#fff
-    style Phase3 fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#fff
-    style Phase4 fill:#1e293b,stroke:#8b5cf6,stroke-width:2px,color:#fff
-```
-
----
-
 ## 📚 Curated Problem Directory
-
----
 
 ### 1. Arrays
 
