@@ -51,7 +51,7 @@ void Solve()
     int n;
     cin >> n;
 
-    priority_queue<Person, vector<Person>, PersonCompare> pq; // A priority queue of persons, max heap by default, but we want to make a max heap according to the ages of the persons, so we need to make a comparator class and pass it to the priority queue
+    priority_queue<Person, vector<Person>, PersonCompare> pq; // A priority queue of persons with underlying vector of type Person and comparator class PersonCompare to compare the ages of the persons
 
     for (int i = 0; i < n; i++)
     {
