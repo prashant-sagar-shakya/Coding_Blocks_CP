@@ -40,7 +40,7 @@ void Solve()
     {
         int val = s.size() - s.order_of_key({-res[i], 10000000}); // checking the no. of element which are greater than -ve of the current value in the left side from the current value
         ans += val;
-        s.insert({res[i], i});
+        s.insert({res[i], i}); // Storing result with its index to store duplicate values separately
     }
     cout << endl;
     cout << ans;
