@@ -45,34 +45,15 @@ void Solve()
     for (auto &i : b)
         cin >> i;
 
-    int low = 0, high = n;
-    while (low <= high)
-    {
-        int cutA = low + (high - low) / 2;
-        int cutB = (2 * n + 1) / 2 - cutA;
+    vector<int> c(2 * n);
 
-        int leftA = (cutA == 0) ? INT_MIN : a[cutA - 1];
-        int rightA = (cutA == n) ? INT_MAX : a[cutA];
-        int leftB = (cutB == 0) ? INT_MIN : b[cutB - 1];
-        int rightB = (cutB == n) ? INT_MAX : b[cutB];
+    // Merge two sorted arrays
+    merge(a.begin(), a.end(),
+          b.begin(), b.end(),
+          c.begin());
 
-        // Core logic of BS
-        if (leftA <= rightB && rightA >= leftB)
-        {
-            int maxi = max(leftA, leftB);
-            int mini = min(rightA, rightB);
-            cout << (maxi + mini) / 2;
-            return;
-        }
-
-        // A's left partition contains a value that's too large
-        else if (leftA > rightB)
-            high = cutA - 1;
-
-        // A's left partition contains a value that's too small
-        else
-            low = cutA + 1;
-    }
+    // Calculate median
+    cout << (c[n - 1] + c[n]) / 2 << '\n';
 }
 
 // Driver code
